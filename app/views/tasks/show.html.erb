@@ -1,0 +1,25 @@
+<h1>Page détail de la task:</h1>
+
+
+
+
+<p> Tâche: <%= @task.name %> </P>
+
+<p> Tâche: <%= @task.description %> </P>
+
+
+
+
+<%= link_to "Modifier une tâche", edit_task_path(@task.id) %>
+
+
+
+<%= link_to "Supprimer une tâche", task_path(@task.id),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
+
+
+<%= link_to "Revenir à la liste des tâches", tasks_path %>
+
+
